@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_home) {
 
                 } else if (tabId == R.id.tab_todo) {
-                    Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent i = new Intent(MainActivity.this, DailyInputActivity.class);
                     startActivity(i);
                     finish();
                 } else if (tabId == R.id.tab_daily) {
