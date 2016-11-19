@@ -33,4 +33,5 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.+'
     compile 'com.roughike:bottom-bar:2.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.aurelhubert:ahbottomnavigation:0.1.3'
 }
