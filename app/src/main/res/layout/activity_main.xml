@@ -129,7 +129,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="normal|bold"
-                    android:layout_weight="3"
+                    android:layout_weight="6"
                     android:clickable="false" />
 
                 <TextView
@@ -144,24 +144,52 @@
                     android:textColor="@android:color/white"
                     android:textSize="14sp"
                     android:clickable="false" />
+
             </LinearLayout>
         </GridLayout>
 
-        <TextView
-            android:text="So far so good! You might want to consider taking the bus instead of driving and eating chicken instead of beef next time."
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tipBox"
-            android:layout_weight="3"
-            android:background="@color/colorPrimary"
-            android:textAlignment="center"
-            android:paddingTop="10dp"
-            android:layout_marginTop="20dp"
-            android:paddingBottom="10dp"
-            android:padding="10dp"
-            android:textColor="@android:color/background_light"
-            android:clickable="false"
-            style="@style/Base.AlertDialog.AppCompat.Light" />
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <TextView
+                android:text="So far so good! You might want to consider taking the bus instead of driving and eating chicken instead of beef next time."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipBox"
+                android:layout_weight="3"
+                android:background="@android:color/background_light"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:textColor="?android:attr/textColorHint"
+                android:clickable="false"
+                style="@style/Base.AlertDialog.AppCompat.Light"
+                android:alpha=".7"
+                android:elevation="13dp"
+                android:textStyle="normal|bold" />
+
+
+            <TextView
+                android:text="So far so good! You might want to consider taking the bus instead of driving and eating chicken instead of beef next time."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipBox"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp"
+                android:padding="10dp"
+                android:textColor="@android:color/transparent"
+                android:clickable="false"
+                style="@style/Base.AlertDialog.AppCompat.Light" />
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
