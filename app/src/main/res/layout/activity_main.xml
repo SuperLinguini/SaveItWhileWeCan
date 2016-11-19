@@ -74,7 +74,7 @@
                     android:textAlignment="center"
                     android:textSize="50sp"
                     android:textStyle="normal|bold"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@android:color/background_light"
                     android:clickable="false"
                     android:layout_gravity="center_vertical" />
 
@@ -130,7 +130,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="normal|bold"
-                    android:layout_weight="6"
+                    android:layout_weight="4"
                     android:clickable="false" />
 
                 <TextView
@@ -196,14 +196,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Friend's Scores"
+            android:text="Facebook Friend's Scores"
             android:ems="10"
             android:id="@+id/monthlyLabel"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textStyle="normal|bold"
             android:textColor="@android:color/white"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:layout_margin="15dp"
             android:clickable="false" />
 
@@ -217,9 +217,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
-                <FrameLayout android:layout_width="100dp"
-                    android:background="?android:attr/colorButtonNormal"
-                    android:layout_height="100dp">
+                <FrameLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -229,22 +232,164 @@
                         <ImageView
                             app:srcCompat="@drawable/woman1"
                             android:id="@+id/imageView"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
                             android:layout_gravity="center_horizontal"
-                            android:paddingTop="6dp" />
+                            android:paddingTop="6dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
 
                         <TextView
-                            android:text="TextView"
+                            android:text="Jane Andrews"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView3" />
+                            android:id="@+id/textView3"
+                            android:gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold"
+                            android:paddingTop="10dp" />
 
                         <TextView
-                            android:text="TextView"
+                            android:text="94"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView4"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="36sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light"
+                            android:paddingBottom="5dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            app:srcCompat="@drawable/man1"
+                            android:id="@+id/imageView"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingTop="6dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:text="Robert Martell"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView4" />
+                            android:id="@+id/textView3"
+                            android:gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold"
+                            android:paddingTop="10dp" />
+
+                        <TextView
+                            android:text="67"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView4"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="36sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light"
+                            android:paddingBottom="5dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            app:srcCompat="@drawable/man2"
+                            android:id="@+id/imageView"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingTop="6dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:text="Andrew Lopez"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3"
+                            android:gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold"
+                            android:paddingTop="10dp" />
+
+                        <TextView
+                            android:text="88"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView4"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="36sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light"
+                            android:paddingBottom="5dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            app:srcCompat="@drawable/woman2"
+                            android:id="@+id/imageView"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingTop="6dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:text="Melissa Kramer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3"
+                            android:gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold"
+                            android:paddingTop="10dp" />
+
+                        <TextView
+                            android:text="42"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView4"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="36sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light"
+                            android:paddingBottom="5dp" />
                     </LinearLayout>
                 </FrameLayout>
             </LinearLayout>
