@@ -8,10 +8,176 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#4ab970"
     tools:context="com.example.briandesouza.saveitwhilewecan.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Your Eco Score"
+            android:ems="10"
+            android:id="@+id/titleLabel"
+            android:layout_weight="3"
+            android:gravity="center_vertical|center"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:focusableInTouchMode="false" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:columnOrderPreserved="false"
+            android:layout_weight="3"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/yesterdayScore"
+                    android:layout_weight="1"
+                    android:text="75"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/white"
+                    android:clickable="false"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="10"
+                    android:id="@+id/todayScore"
+                    android:layout_weight="1"
+                    android:text="67"
+                    android:textAlignment="center"
+                    android:textSize="50sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:clickable="false"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/tomorrowScore"
+                    android:layout_weight="1"
+                    android:text="82"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/white"
+                    android:clickable="false"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Today"
+                    android:ems="10"
+                    android:id="@+id/yesterdayLabel"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:clickable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Overall"
+                    android:ems="10"
+                    android:id="@+id/todayLabel"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:layout_weight="3"
+                    android:clickable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="This Month"
+                    android:ems="10"
+                    android:id="@+id/tomorrowLabel"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:clickable="false" />
+            </LinearLayout>
+        </GridLayout>
+
+        <TextView
+            android:text="So far so good! You might want to consider taking the bus instead of driving and eating chicken instead of beef next time."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tipBox"
+            android:layout_weight="3"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:padding="10dp"
+            android:textColor="@android:color/background_light"
+            android:clickable="false"
+            style="@style/Base.AlertDialog.AppCompat.Light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Friend's Scores"
+            android:ems="10"
+            android:id="@+id/monthlyLabel"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:layout_margin="15dp"
+            android:clickable="false" />
+
+    </LinearLayout>
+
 </RelativeLayout>
