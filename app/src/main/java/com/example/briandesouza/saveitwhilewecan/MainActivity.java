@@ -1,6 +1,8 @@
 package com.example.briandesouza.saveitwhilewecan;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,21 +52,24 @@ public class MainActivity extends AppCompatActivity {
         TextView monthlyScore = (TextView) findViewById(R.id.monthScore);
 
         final int score, monthlyScoreInt, overallScoreInt;
-        Intent received = getIntent();
-        if(received.hasExtra("score"))
+
+        overallScoreInt = 64;
+
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.pref),
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        if(sharedPref.getInt(getString(R.string.saved_monthly_score), -1) != -1)
         {
-            score = received.getIntExtra("score",43);
-            overallScoreInt = 64;
+            monthlyScoreInt = sharedPref.getInt(getString(R.string.saved_monthly_score), -1);
         } else {
-            score = 42;
-            overallScoreInt = 64;
+            monthlyScoreInt = 0;
         }
 
-        if(received.hasExtra("monthlyScore"))
+        if(sharedPref.getInt(getString(R.string.saved_daily_score), -1) != -1)
         {
-            monthlyScoreInt = received.getIntExtra("monthlyScore",43);
+            score = sharedPref.getInt(getString(R.string.saved_daily_score), -1);
         } else {
-            monthlyScoreInt = 63;
+            score = 0;
         }
 
         todayScore.setText("" + score);
