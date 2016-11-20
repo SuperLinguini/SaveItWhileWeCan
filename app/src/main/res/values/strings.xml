@@ -13,7 +13,7 @@
 
     <string name="facebook_app_id">1699392123709993</string>
     <string name="fb_login_protocol_scheme">fb1699392123709993</string>
-    <string name="data">http://desmap.maps.arcgis.com/sharing/rest/content/items/58e9990771214384992c9579f727d038/data/0</string>
+    <string name="data">http://services7.arcgis.com/C1lwDpDbhFGgn5RK/arcgis/rest/services/CarbonFootprint/FeatureServer/0</string>
 
 
     <!-- Strings related to login -->

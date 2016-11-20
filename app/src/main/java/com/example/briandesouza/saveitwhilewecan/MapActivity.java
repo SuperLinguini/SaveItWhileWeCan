@@ -9,6 +9,7 @@ import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -51,7 +52,7 @@ public class MapActivity extends AppCompatActivity {
         // Add Graphics layer to the MapView
         mGraphicsLayer = new GraphicsLayer();
         mMapView.addLayer(mGraphicsLayer);
-        //new QueryFeatureLayer().execute();
+        new QueryFeatureLayer().execute();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +126,7 @@ public class MapActivity extends AppCompatActivity {
 
             // Define a new query and set parameters
             QueryParameters mParams = new QueryParameters();
+            mParams.setWhere("1=1");
             mParams.setReturnGeometry(true);
 
             // Define the new instance of QueryTask
@@ -152,6 +154,8 @@ public class MapActivity extends AppCompatActivity {
 
             // Envelope to focus on the map extent on the results
             Envelope extent = new Envelope();
+
+            Log.d("SaveIt", results.toString());
 
             // iterate through results
             for (Object element : results) {
