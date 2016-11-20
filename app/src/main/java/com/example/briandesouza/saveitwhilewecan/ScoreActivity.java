@@ -28,6 +28,23 @@ public class ScoreActivity extends AppCompatActivity {
         }
 
         overallScore.setText("" + overallScoreInt);
+
+        TextView tip = (TextView) findViewById(R.id.suggestionBox);
+        TextView donation = (TextView) findViewById(R.id.recommendedDonationAmt);
+
+        if (overallScoreInt >= 90) {
+            tip.setText("Awesome! You are on the right track to  dramatically reduce emissions and save our climate.  Make sure your friends are doing their part for the environment!");
+            donation.setText("$5/mo");
+        } else if (overallScoreInt < 90 && overallScoreInt >= 70) {
+            tip.setText("Great job! Your Eco Score is above average! Consider improving to a low carbon vehicle and make sure to always turn off lights you are not using.");
+            donation.setText("$10/mo");
+        } else if (overallScoreInt < 70 && overallScoreInt >= 50) {
+            tip.setText("You currently have an average Eco Score for an American. To improve, try to stop eating red meat more than three times a week and take the bus as often as possible.");
+            donation.setText("$15/mo");
+        } else {
+            tip.setText("Your Eco Score is well below average. You should strongly consider restructuring how you act in terms of travel, food, and, energy use.");
+            donation.setText("$20/mo");
+        }
     }
 
     public void onBackPressed(){

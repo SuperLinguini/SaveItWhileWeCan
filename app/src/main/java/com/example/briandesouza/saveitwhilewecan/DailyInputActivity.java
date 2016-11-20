@@ -32,6 +32,7 @@ import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnDairy;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnFruitsVeggies;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnPorkTurkey;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnProcessedFood;
+import static com.example.briandesouza.saveitwhilewecan.R.id.submitBtnMonthly;
 import static com.example.briandesouza.saveitwhilewecan.R.id.submitDailyBtn;
 import static com.example.briandesouza.saveitwhilewecan.R.id.yesBtnBeefLamb;
 import static com.example.briandesouza.saveitwhilewecan.R.id.yesBtnBikeWalk;
@@ -250,6 +251,7 @@ public class DailyInputActivity extends AppCompatActivity {
             }
         });
 
+
         final TextView submit = (TextView) findViewById(submitDailyBtn);
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -262,6 +264,9 @@ public class DailyInputActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putInt(getString(R.string.saved_daily_score), score);
                     editor.commit();
+
+                    submit.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary, null));
+
 
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
                     startActivity(i);
@@ -304,6 +309,8 @@ public class DailyInputActivity extends AppCompatActivity {
 
 
     }
+
+
 
     private int getScore(int beef, int chicken, int fruits, int dairy, int pork, int processed, int bike, int car, int bus)
     {
