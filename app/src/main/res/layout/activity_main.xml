@@ -404,6 +404,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
+            app:bb_inActiveTabColor="#FFFFFF"
+            app:bb_activeTabColor="#FFFFFF"
             app:bb_tabXmlResource="@xml/bottombar_tabs"/>
     </LinearLayout>
 </FrameLayout>

@@ -651,6 +651,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
         android:id="@+id/bottomBar2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        app:bb_inActiveTabColor="#FFFFFF"
+        app:bb_activeTabColor="#FFFFFF"
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
         />

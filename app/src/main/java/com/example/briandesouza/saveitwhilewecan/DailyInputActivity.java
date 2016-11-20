@@ -55,13 +55,14 @@ public class DailyInputActivity extends AppCompatActivity {
 
 
         BottomBar bottomBar = (BottomBar) findViewById(bottomBar2);
+        bottomBar.setDefaultTab(R.id.tab_daily);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 if (tabId == R.id.tab_home) {
-                    /*Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
+                    Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
                     startActivity(i);
-                    finish();*/
+                    finish();
                 } else if (tabId == R.id.tab_todo) {
 
                 } else if (tabId == R.id.tab_daily) {
