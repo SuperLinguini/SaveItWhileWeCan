@@ -7,9 +7,13 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.facebook.login.LoginManager;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -23,6 +27,7 @@ import com.facebook.HttpMethod;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 
+import static com.example.briandesouza.saveitwhilewecan.R.id.action_logout;
 import static com.example.briandesouza.saveitwhilewecan.R.id.overallScore;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_header);
+        FacebookSdk.sdkInitialize(getApplicationContext());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         tipBoxButton = (TextView) findViewById(R.id.tipBox);
 
         TextView todayScore = (TextView) findViewById(R.id.overallScoreTxt);
-        TextView overallScore = (TextView)findViewById(R.id.overallScore);
+        TextView overallScore = (TextView) findViewById(R.id.overallScore);
         TextView monthlyScore = (TextView) findViewById(R.id.monthScore);
 
         final int score, monthlyScoreInt, overallScoreInt;
@@ -165,9 +171,23 @@ public class MainActivity extends AppCompatActivity {
         profileTracker.stopTracking();
     }
 
-    public void userInput(View v) {
-        i = new Intent(MainActivity.this, DailyInputActivity.class);
-        startActivity(i);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case action_logout:
+                LoginManager.getInstance().logOut();
+                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

@@ -9,7 +9,8 @@ import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import com.esri.android.map.GraphicsLayer;
@@ -50,9 +51,18 @@ public class MapActivity extends AppCompatActivity {
         // Add Graphics layer to the MapView
         mGraphicsLayer = new GraphicsLayer();
         mMapView.addLayer(mGraphicsLayer);
-        new QueryFeatureLayer().execute();
+        //new QueryFeatureLayer().execute();
 
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar2);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MapActivity.this, Map2Activity.class);
+                startActivity(i);
+            }
+        });
+
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar11);
         bottomBar.setDefaultTab(R.id.tab_map);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
@@ -164,6 +174,5 @@ public class MapActivity extends AppCompatActivity {
 
         }
     }
-
 
 }
