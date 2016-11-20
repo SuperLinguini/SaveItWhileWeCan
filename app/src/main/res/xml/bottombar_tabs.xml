@@ -7,7 +7,7 @@
         barColorWhenSelected="#15d0df"/>
     <tab
         id="@+id/tab_todo"
-        icon="@mipmap/ic_home_black_24dp"
+        icon="@mipmap/ic_world"
         title="Todo"
         barColorWhenSelected="#11b8b4"/>
     <tab
