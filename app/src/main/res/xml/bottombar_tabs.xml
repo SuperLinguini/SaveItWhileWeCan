@@ -4,20 +4,20 @@
         id="@+id/tab_home"
         icon="@mipmap/ic_home_black_24dp"
         title="Home"
-        barColorWhenSelected="#15d0df"/>
+        barColorWhenSelected="#1d1f4e"/>
     <tab
         id="@+id/tab_map"
         icon="@mipmap/ic_world"
         title="CO2 Map"
-        barColorWhenSelected="#11b8b4"/>
+        barColorWhenSelected="#1d1f4e"/>
     <tab
         id="@+id/tab_daily"
         icon="@mipmap/ic_today_black_24dp"
         title="Daily"
-        barColorWhenSelected="#1096a1"/>
+        barColorWhenSelected="#1d1f4e"/>
     <tab
         id="@+id/tab_monthly"
         icon="@mipmap/ic_date_range_black_24dp"
         title="Monthly"
-        barColorWhenSelected="#04506d"/>
+        barColorWhenSelected="#1d1f4e"/>
 </tabs>

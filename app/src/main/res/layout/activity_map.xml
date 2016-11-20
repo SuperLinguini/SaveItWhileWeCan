@@ -36,7 +36,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         app:bb_inActiveTabColor="#FFFFFF"
-        app:bb_activeTabColor="#FFFFFF"
+        app:bb_activeTabColor="#9acfa4"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
         android:layout_gravity="bottom"/>
     <!--<android.support.design.widget.FloatingActionButton-->
