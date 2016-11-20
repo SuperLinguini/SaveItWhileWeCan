@@ -318,7 +318,8 @@
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:layout_width="120dp"
-                    android:layout_height="120dp" />
+                    android:layout_height="120dp"
+                    android:id="@+id/nrdcImg" />
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -371,7 +372,8 @@
                     android:layout_height="120dp"
                     app:srcCompat="@drawable/sierra"
                     android:layout_weight="1"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/sierraImg" />
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -422,7 +424,8 @@
                     android:layout_height="120dp"
                     app:srcCompat="@drawable/carbofund"
                     android:layout_weight="1"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/carbonImg" />
 
                 <LinearLayout
                     android:orientation="vertical"
