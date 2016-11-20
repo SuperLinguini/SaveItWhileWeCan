@@ -286,14 +286,11 @@ public class DailyInputActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_home) {
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
                     startActivity(i);
-                    finish();
                 } else if (tabId == R.id.tab_todo) {
 
                 } else if (tabId == R.id.tab_daily) {
 
                 } else if (tabId == R.id.tab_monthly) {
-                    // The tab with id R.id.tab_favorites was selected,
-                    // change your content accordingly.
                     Intent i = new Intent(DailyInputActivity.this, MonthlyInputActivity.class);
                     startActivity(i);
                     finish();
