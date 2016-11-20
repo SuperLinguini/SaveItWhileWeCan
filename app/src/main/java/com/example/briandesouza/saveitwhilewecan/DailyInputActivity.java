@@ -1,6 +1,7 @@
 package com.example.briandesouza.saveitwhilewecan;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
@@ -256,9 +257,13 @@ public class DailyInputActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (bus != -1 && car != -1 && bike != -1 && processed != -1 && pork != -1 && dairy != -1 && fruits != -1 && chicken != -1 && beef != -1) {
                     int score = getScore(beef, chicken, fruits, dairy, pork, processed, bike, car, bus);
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.pref),
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putInt(getString(R.string.saved_daily_score), score);
+                    editor.commit();
+
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
-                    System.out.println("" + score);
-                    i.putExtra("score", score);
                     startActivity(i);
                     finish();
                 } else {

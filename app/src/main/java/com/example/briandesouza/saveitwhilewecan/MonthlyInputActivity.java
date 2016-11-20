@@ -2,6 +2,7 @@ package com.example.briandesouza.saveitwhilewecan;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Vibrator;
 import android.support.annotation.IdRes;
@@ -73,6 +74,7 @@ public class MonthlyInputActivity extends AppCompatActivity {
             if (tabId == R.id.tab_home) {
                 Intent i = new Intent(MonthlyInputActivity.this, MainActivity.class);
                 startActivity(i);
+                finish();
             } else if (tabId == R.id.tab_map) {
                 Intent i = new Intent(MonthlyInputActivity.this, MapActivity.class);
                 startActivity(i);
@@ -121,9 +123,14 @@ public class MonthlyInputActivity extends AppCompatActivity {
                             Double.parseDouble(energy.getText().toString()), Double.parseDouble(water.getText().toString()),
                             Double.parseDouble(donation1.getText().toString()), Double.parseDouble(donation2.getText().toString()),
                             Double.parseDouble(donation3.getText().toString()));
+
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.pref),
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putInt(getString(R.string.saved_monthly_score), score);
+                    editor.commit();
+
                     Intent i = new Intent(MonthlyInputActivity.this, MainActivity.class);
-                    System.out.println("" + score);
-                    i.putExtra("monthlyScore", score);
                     startActivity(i);
                     finish();
                 }

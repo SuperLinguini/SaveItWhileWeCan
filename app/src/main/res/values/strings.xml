@@ -5,6 +5,12 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_login">Sign in</string>
 
+    <!-- Stored Preferences-->
+    <string name="pref">com.example.briandesouza.saveitwhilewecan.PREF</string>
+    <string name="saved_overall_score">Overall</string>
+    <string name="saved_daily_score">Daily</string>
+    <string name="saved_monthly_score">Monthly</string>
+
     <string name="facebook_app_id">1699392123709993</string>
     <string name="fb_login_protocol_scheme">fb1699392123709993</string>
     <string name="data">http://services7.arcgis.com/C1lwDpDbhFGgn5RK/arcgis/rest/services/CO2/FeatureServer/0</string>
