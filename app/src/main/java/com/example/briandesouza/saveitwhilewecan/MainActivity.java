@@ -23,6 +23,10 @@ import com.facebook.HttpMethod;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static com.example.briandesouza.saveitwhilewecan.R.id.overallScore;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     ProfileTracker profileTracker;
     AccessToken accessToken;
     private TextView overallButton, toButton, monthButton, tipBoxButton;
+    int monthListArray[] = {80, 75, 93};
+    int dailyListArray[] = {67, 92, 100, 53, 68, 67, 90, 80, 87, 73, 82, 90, 48, 86, 59, 98,
+            65, 100, 70, 59, 83, 76, 95, 100, 84};
+    ArrayList<Integer> monthList = new ArrayList<>(monthListArray.length), dailyList = new ArrayList<>(dailyListArray.length);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +59,24 @@ public class MainActivity extends AppCompatActivity {
         TextView overallScore = (TextView)findViewById(R.id.overallScore);
         TextView monthlyScore = (TextView) findViewById(R.id.monthScore);
 
-        final int score, monthlyScoreInt, overallScoreInt;
+        int dailySum=0, monthlySum=0;
 
-        overallScoreInt = 64;
+        for(int i = 0; i < monthListArray.length; i++)
+        {
+            monthList.add(monthListArray[i]);
+            monthlySum += monthListArray[i];
+        }
+
+        for(int j = 0; j < dailyListArray.length; j++)
+        {
+            dailyList.add(dailyListArray[j]);
+            dailySum += dailyListArray[j];
+        }
+
+        int score, monthlyScoreInt, overallScoreInt;
 
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.pref),
                 Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
         if(sharedPref.getInt(getString(R.string.saved_monthly_score), -1) != -1)
         {
             monthlyScoreInt = sharedPref.getInt(getString(R.string.saved_monthly_score), -1);
@@ -72,6 +91,19 @@ public class MainActivity extends AppCompatActivity {
             score = 0;
         }
 
+        System.out.println("month " + ((double) monthlySum / monthListArray.length));
+        System.out.println("" + ((double)dailySum/dailyListArray.length));
+
+        monthlySum += monthlyScoreInt;
+        dailySum += score;
+
+        overallScoreInt = (int) (((double)monthlySum + ((double) dailySum / (dailyListArray.length + 1))) /
+                ((double) monthListArray.length + 2));
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.saved_overall_score), overallScoreInt);
+        editor.commit();
+
         todayScore.setText("" + score);
         overallScore.setText("" + overallScoreInt);
         monthlyScore.setText("" + monthlyScoreInt);
@@ -80,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, ScoreActivity.class);
-                i.putExtra("overallScore", overallScoreInt);
                 startActivity(i);
             }
         });
