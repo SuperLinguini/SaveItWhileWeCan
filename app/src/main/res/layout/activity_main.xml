@@ -66,14 +66,15 @@
                     android:inputType="numberSigned"
                     android:ems="10"
                     android:id="@+id/overallScore"
-                    android:layout_weight="1"
+                    android:layout_weight=".7"
                     android:text="67"
                     android:textAlignment="center"
-                    android:textSize="50sp"
+                    android:textSize="60sp"
                     android:textStyle="normal|bold"
                     android:textColor="@android:color/background_light"
                     android:clickable="false"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorPrimary" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -47,8 +47,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void userInput(View v) {
-        i = new Intent(MainActivity.this, DailyInputActivity.class);
-        startActivity(i);
-    }
+
 }
