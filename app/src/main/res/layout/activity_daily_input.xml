@@ -98,7 +98,9 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
                                     android:textStyle="normal|bold"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:onClick="onClick"
+                                    android:clickable="true"/>
 
                                 <Button
                                     android:text="N"
@@ -109,7 +111,9 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
                                     android:textStyle="normal|bold"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:onClick="onClick"
+                                    android:clickable="true"/>
                             </LinearLayout>
                         </GridLayout>
 
