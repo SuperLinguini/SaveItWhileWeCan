@@ -222,7 +222,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
 
                                 <Button
                                     android:text="N"
@@ -232,7 +233,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
                         </GridLayout>
                     </LinearLayout>
@@ -407,7 +409,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
 
                                 <Button
                                     android:text="N"
@@ -417,7 +420,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
                         </GridLayout>
                     </LinearLayout>
@@ -617,7 +621,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
 
                                 <Button
                                     android:text="N"
@@ -627,7 +632,8 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                                     android:layout_weight="1"
                                     android:background="@color/cardview_dark_background"
                                     android:textSize="16sp"
-                                    android:textColor="@color/cardview_light_background" />
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
                         </GridLayout>
                     </LinearLayout>
@@ -641,7 +647,7 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
             android:text="SUBMIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button10"
+            android:id="@+id/submitDailyBtn"
             android:layout_marginTop="10dp" />
 
 
