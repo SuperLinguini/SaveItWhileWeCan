@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@mipmap/ic_home_black_24dp"
+        title="Home" />
+    <tab
+        id="@+id/tab_todo"
+        icon="@mipmap/ic_home_black_24dp"
+        title="Todo" />
+    <tab
+        id="@+id/tab_daily"
+        icon="@mipmap/ic_today_black_24dp"
+        title="Daily" />
+    <tab
+        id="@+id/tab_monthly"
+        icon="@mipmap/ic_date_range_black_24dp"
+        title="Monthly" />
+</tabs>
