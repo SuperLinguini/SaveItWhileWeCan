@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_home) {
 
                 } else if (tabId == R.id.tab_todo) {
-                    /*Intent i = new Intent(MainActivity.this, ScoreActivity.class);
+                    Intent i = new Intent(MainActivity.this, MapActivity.class);
                     startActivity(i);
-                    finish();*/
+                    finish();
                 } else if (tabId == R.id.tab_daily) {
                     Intent i = new Intent(MainActivity.this, DailyInputActivity.class);
                     startActivity(i);
@@ -102,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
         };
         // If the access token is available already assign it.
         accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken == null) {
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+        }
 
         profileTracker = new ProfileTracker() {
             @Override
