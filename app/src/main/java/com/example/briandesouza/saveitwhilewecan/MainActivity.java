@@ -5,7 +5,6 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.roughike.bottombar.BottomBar;
@@ -37,26 +36,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         overallButton = (TextView) findViewById(overallScore);
-        toButton = (TextView) findViewById(R.id.todayScore);
+        toButton = (TextView) findViewById(R.id.overallScoreTxt);
         monthButton = (TextView) findViewById(R.id.monthScore);
         tipBoxButton = (TextView) findViewById(R.id.tipBox);
 
+        TextView todayScore = (TextView) findViewById(R.id.overallScoreTxt);
         TextView overallScore = (TextView)findViewById(R.id.overallScore);
+        TextView monthlyScore = (TextView) findViewById(R.id.monthScore);
 
-        int score;
+        final int score, monthlyScoreInt, overallScoreInt;
         Intent received = getIntent();
         if(received.hasExtra("score"))
         {
             score = received.getIntExtra("score",43);
+            monthlyScoreInt = 63;
+            overallScoreInt = 64;
         } else {
             score = 42;
+            monthlyScoreInt = 63;
+            overallScoreInt = 64;
         }
-        overallScore.setText("" + score);
+        todayScore.setText("" + score);
+        overallScore.setText("" + overallScoreInt);
+        monthlyScore.setText("" + monthlyScoreInt);
 
         overallScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, ScoreActivity.class);
+                i.putExtra("overallScore", overallScoreInt);
                 startActivity(i);
             }
         });
