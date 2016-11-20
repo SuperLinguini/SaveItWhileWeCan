@@ -21,6 +21,8 @@ import com.facebook.HttpMethod;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 
+import static com.example.briandesouza.saveitwhilewecan.R.id.overallScore;
+
 public class MainActivity extends AppCompatActivity {
 
     Intent i;
@@ -34,10 +36,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        overallButton = (TextView) findViewById(R.id.overallScore);
+        overallButton = (TextView) findViewById(overallScore);
         toButton = (TextView) findViewById(R.id.todayScore);
         monthButton = (TextView) findViewById(R.id.monthScore);
         tipBoxButton = (TextView) findViewById(R.id.tipBox);
+
+        TextView overallScore = (TextView)findViewById(R.id.overallScore);
+
+        int score;
+        Intent received = getIntent();
+        if(received.hasExtra("score"))
+        {
+            score = received.getIntExtra("score",43);
+        } else {
+            score = 42;
+        }
+        overallScore.setText("" + score);
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
