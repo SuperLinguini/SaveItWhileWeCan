@@ -8,15 +8,19 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
+import android.content.Context;
+import android.widget.Toast;
+import android.os.Vibrator;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
+import android.graphics.Color;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import org.w3c.dom.Text;
 
+import static android.app.PendingIntent.getActivity;
 import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar;
 import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar2;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBeefLamb;
@@ -258,6 +262,17 @@ public class DailyInputActivity extends AppCompatActivity {
                     i.putExtra("score", score);
                     startActivity(i);
                     finish();
+                } else {
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    // Vibrate for 250 milliseconds
+                    v.vibrate(250);
+
+                    Toast toast = Toast.makeText(DailyInputActivity.this,
+                            "Please Enter Yes or No for All Options", Toast.LENGTH_LONG);
+                    TextView view2 = (TextView) toast.getView().findViewById(android.R.id.message);
+                    view2.setTextColor(Color.rgb(241,91,64));
+                    toast.show();
+
                 }
             }
         });
@@ -279,6 +294,9 @@ public class DailyInputActivity extends AppCompatActivity {
                 } else if (tabId == R.id.tab_monthly) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
+                    Intent i = new Intent(DailyInputActivity.this, MonthlyInputActivity.class);
+                    startActivity(i);
+                    finish();
                 }
             }
         });

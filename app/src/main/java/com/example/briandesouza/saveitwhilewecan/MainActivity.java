@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (tabId == R.id.tab_monthly) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
+                    Intent i = new Intent(MainActivity.this, MonthlyInputActivity.class);
+                    startActivity(i);
+                    finish();
                 }
             }
         });

@@ -8,7 +8,7 @@
     <tab
         id="@+id/tab_todo"
         icon="@mipmap/ic_world"
-        title="Todo"
+        title="CO2 Map"
         barColorWhenSelected="#11b8b4"/>
     <tab
         id="@+id/tab_daily"
