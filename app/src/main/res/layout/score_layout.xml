@@ -196,7 +196,7 @@
             android:gravity="center_horizontal"
             android:textSize="40sp"
             android:textStyle="normal|bold"
-            android:textColor="?android:attr/textColorSearchUrl"
+            android:textColor="#4fb772"
             android:layout_width="200dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
