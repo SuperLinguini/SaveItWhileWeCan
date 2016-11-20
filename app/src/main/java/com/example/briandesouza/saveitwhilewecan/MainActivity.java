@@ -49,13 +49,19 @@ public class MainActivity extends AppCompatActivity {
         if(received.hasExtra("score"))
         {
             score = received.getIntExtra("score",43);
-            monthlyScoreInt = 63;
             overallScoreInt = 64;
         } else {
             score = 42;
-            monthlyScoreInt = 63;
             overallScoreInt = 64;
         }
+
+        if(received.hasExtra("monthlyScore"))
+        {
+            monthlyScoreInt = received.getIntExtra("monthlyScore",43);
+        } else {
+            monthlyScoreInt = 63;
+        }
+
         todayScore.setText("" + score);
         overallScore.setText("" + overallScoreInt);
         monthlyScore.setText("" + monthlyScoreInt);

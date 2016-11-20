@@ -18,6 +18,10 @@ import android.graphics.Color;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import org.w3c.dom.Text;
+
+import static android.app.PendingIntent.getActivity;
+import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBeefLamb;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBikeWalk;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBus;
