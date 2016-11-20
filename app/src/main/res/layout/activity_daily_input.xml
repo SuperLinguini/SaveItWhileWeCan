@@ -4,31 +4,29 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/activity_daily_input"
 android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingBottom="@dimen/activity_vertical_margin"
-android:paddingLeft="@dimen/activity_horizontal_margin"
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
+android:layout_height="wrap_content"
+
 android:background="#4ab970"
-tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity">
+tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
+    android:isScrollContainer="false">
 
-
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="60dp">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:text="Daily Quiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:gravity="center_horizontal"
-            android:textSize="24sp"
-            android:textStyle="normal|bold"
-            android:textColor="@color/cardview_light_background" />
+        android:layout_alignParentStart="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical">
 
         <TextView
             android:text="Food - Did You Eat:"
@@ -38,6 +36,618 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity">
             android:textStyle="normal|italic"
             android:textColor="@color/cardview_light_background"
             android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            app:srcCompat="@drawable/beef"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="40dp"
+                            android:layout_width="40dp" />
+
+                        <TextView
+                            android:text="Beef/Lamb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button5"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button4"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/chicken"
+                            android:id="@+id/imageView3"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Chicken/Fish"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView6"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button7"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button6"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/apple"
+                            android:id="@+id/imageView4"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Fruits/Veggies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button9"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button8"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            app:srcCompat="@drawable/cheese"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="40dp"
+                            android:layout_width="40dp" />
+
+                        <TextView
+                            android:text="Dairy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button5"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button4"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/pork"
+                            android:id="@+id/imageView3"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Pork/Turkey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView6"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button7"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button6"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/badfood"
+                            android:id="@+id/imageView4"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Processed Food"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button9"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button8"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:text="Main Transportation Today:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:textSize="18sp"
+            android:textStyle="normal|italic"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginBottom="6dp"
             android:layout_marginTop="10dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            app:srcCompat="@drawable/bike"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="40dp"
+                            android:layout_width="40dp" />
+
+                        <TextView
+                            android:text="Bike/Walk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button5"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button4"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/car"
+                            android:id="@+id/imageView3"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Car"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView6"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button7"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button6"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:background="@color/cardview_dark_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/bus"
+                            android:id="@+id/imageView4"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:text="Bus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:gravity="center_horizontal"
+                            android:textSize="13sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:text="Y"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button9"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+
+                                <Button
+                                    android:text="N"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button8"
+                                    android:layout_weight="1"
+                                    android:background="@color/cardview_dark_background"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/cardview_light_background" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <Button
+            android:text="SUBMIT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button10"
+            android:layout_marginTop="10dp" />
+
+
     </LinearLayout>
+    </ScrollView>
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        />
 </RelativeLayout>
