@@ -3,17 +3,21 @@
     <tab
         id="@+id/tab_home"
         icon="@mipmap/ic_home_black_24dp"
-        title="Home" />
+        title="Home"
+        barColorWhenSelected="#15d0df"/>
     <tab
         id="@+id/tab_todo"
         icon="@mipmap/ic_home_black_24dp"
-        title="Todo" />
+        title="Todo"
+        barColorWhenSelected="#11b8b4"/>
     <tab
         id="@+id/tab_daily"
         icon="@mipmap/ic_today_black_24dp"
-        title="Daily" />
+        title="Daily"
+        barColorWhenSelected="#1096a1"/>
     <tab
         id="@+id/tab_monthly"
         icon="@mipmap/ic_date_range_black_24dp"
-        title="Monthly" />
+        title="Monthly"
+        barColorWhenSelected="#04506d"/>
 </tabs>

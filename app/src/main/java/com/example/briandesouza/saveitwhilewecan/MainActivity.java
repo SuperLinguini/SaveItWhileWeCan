@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_home) {
 
                 } else if (tabId == R.id.tab_todo) {
-                    Intent i = new Intent(MainActivity.this, DailyInputActivity.class);
+                    /*Intent i = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(i);
-                    finish();
+                    finish();*/
                 } else if (tabId == R.id.tab_daily) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
