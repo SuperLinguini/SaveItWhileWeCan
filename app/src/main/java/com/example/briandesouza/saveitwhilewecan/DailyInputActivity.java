@@ -252,7 +252,10 @@ public class DailyInputActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (bus != -1 && car != -1 && bike != -1 && processed != -1 && pork != -1 && dairy != -1 && fruits != -1 && chicken != -1 && beef != -1) {
+                    int score = getScore(beef, chicken, fruits, dairy, pork, processed, bike, car, bus);
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
+                    System.out.println("" + score);
+                    i.putExtra("score", score);
                     startActivity(i);
                     finish();
                 }
@@ -283,4 +286,62 @@ public class DailyInputActivity extends AppCompatActivity {
 
     }
 
+    private int getScore(int beef, int chicken, int fruits, int dairy, int pork, int processed, int bike, int car, int bus)
+    {
+        //these variables reperesent the yes or no questions from the user daily input
+        // 1 = yes, 0 = no
+        //all names only consider the first element in the name
+
+        int dailyscore = 0;
+        //maximum score = 900
+
+        if(car == 0)
+            dailyscore+= 125;
+        else
+            dailyscore+=30;
+
+        if(bus ==0)
+            dailyscore+=50;
+        else
+            dailyscore+=30;
+
+        if(bike== 1)
+            dailyscore+= 150;
+        else
+            dailyscore+= 30;
+
+        if(beef== 0 )
+            dailyscore+= 125;
+        else
+            dailyscore+= 30;
+
+        if(chicken == 0)
+            dailyscore+= 50;
+        else
+            dailyscore+=30;
+
+        if (dairy ==0 )
+            dailyscore+= 100;
+        else
+            dailyscore+= 30;
+
+        if( pork == 0)
+            dailyscore+= 50;
+        else
+            dailyscore+= 30;
+
+        if( fruits == 1)
+            dailyscore+= 150;
+        else
+            dailyscore+= 30;
+
+        if( processed == 0)
+            dailyscore += 100;
+        else
+            dailyscore +=30;
+
+        dailyscore = (int) (((double) dailyscore/ 900.0) * 100.0);
+
+        return dailyscore;
+    }
 }
