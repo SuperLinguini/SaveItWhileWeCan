@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (tabId == R.id.tab_daily) {
                     Intent i = new Intent(MainActivity.this, DailyInputActivity.class);
                     startActivity(i);
+                    finish();
                 } else if (tabId == R.id.tab_monthly) {
                     Intent i = new Intent(MainActivity.this, MonthlyInputActivity.class);
                     startActivity(i);

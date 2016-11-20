@@ -15,7 +15,13 @@ public class MonthlyInputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monthly_input);
 
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar4);
         bottomBar.setDefaultTab(R.id.tab_monthly);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
@@ -24,11 +30,13 @@ public class MonthlyInputActivity extends AppCompatActivity {
                     Intent i = new Intent(MonthlyInputActivity.this, MainActivity.class);
                     startActivity(i);
                 } else if (tabId == R.id.tab_todo) {
-                    /*Intent i = new Intent(MonthlyInputActivity.this, MainActivity.class);
-                    startActivity(i);*/
+                    Intent i = new Intent(MonthlyInputActivity.this, MapActivity.class);
+                    startActivity(i);
+                    finish();
                 } else if (tabId == R.id.tab_daily) {
                     Intent i = new Intent(MonthlyInputActivity.this, DailyInputActivity.class);
                     startActivity(i);
+                    finish();
                 } else if (tabId == R.id.tab_monthly) {
 
                 }

@@ -18,11 +18,6 @@ import android.graphics.Color;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-import org.w3c.dom.Text;
-
-import static android.app.PendingIntent.getActivity;
-import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar;
-import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar2;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBeefLamb;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBikeWalk;
 import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBus;
@@ -278,7 +273,7 @@ public class DailyInputActivity extends AppCompatActivity {
         });
 
 
-        BottomBar bottomBar = (BottomBar) findViewById(bottomBar2);
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar3);
         bottomBar.setDefaultTab(R.id.tab_daily);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
@@ -287,9 +282,9 @@ public class DailyInputActivity extends AppCompatActivity {
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
                     startActivity(i);
                 } else if (tabId == R.id.tab_todo) {
-
-                } else if (tabId == R.id.tab_daily) {
-
+                    Intent i = new Intent(DailyInputActivity.this, MapActivity.class);
+                    startActivity(i);
+                    finish();
                 } else if (tabId == R.id.tab_monthly) {
                     Intent i = new Intent(DailyInputActivity.this, MonthlyInputActivity.class);
                     startActivity(i);

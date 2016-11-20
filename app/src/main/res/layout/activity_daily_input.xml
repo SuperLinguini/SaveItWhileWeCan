@@ -64,7 +64,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
 
                         <ImageView
                             app:srcCompat="@drawable/beef"
-                            android:id="@+id/imageView2"
                             android:layout_gravity="center_horizontal"
                             android:layout_height="40dp"
                             android:layout_width="40dp" />
@@ -73,7 +72,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:text="Beef/Lamb"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView5"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -130,14 +128,12 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             app:srcCompat="@drawable/chicken"
-                            android:id="@+id/imageView3"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:text="Chicken/Fish"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView6"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -191,14 +187,12 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             app:srcCompat="@drawable/apple"
-                            android:id="@+id/imageView4"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:text="Fruits/Veggies"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView8"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -255,7 +249,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
 
                         <ImageView
                             app:srcCompat="@drawable/cheese"
-                            android:id="@+id/imageView2"
                             android:layout_gravity="center_horizontal"
                             android:layout_height="40dp"
                             android:layout_width="40dp" />
@@ -264,7 +257,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:text="Dairy"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView5"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -317,14 +309,12 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             app:srcCompat="@drawable/pork"
-                            android:id="@+id/imageView3"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:text="Pork/Turkey"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView6"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -378,14 +368,12 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             app:srcCompat="@drawable/badfood"
-                            android:id="@+id/imageView4"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:text="Processed Food"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView8"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -467,7 +455,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
 
                         <ImageView
                             app:srcCompat="@drawable/bike"
-                            android:id="@+id/imageView2"
                             android:layout_gravity="center_horizontal"
                             android:layout_height="40dp"
                             android:layout_width="40dp" />
@@ -536,7 +523,6 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:text="Car"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView6"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -590,14 +576,12 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             app:srcCompat="@drawable/bus"
-                            android:id="@+id/imageView4"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:text="Bus"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView8"
                             android:gravity="center_horizontal"
                             android:textSize="13sp"
                             android:textColor="@color/cardview_light_background"
@@ -657,7 +641,7 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
     </LinearLayout>
     </ScrollView>
     <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar2"
+        android:id="@+id/bottomBar3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:bb_inActiveTabColor="#FFFFFF"

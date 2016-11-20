@@ -63,7 +63,6 @@
 
                     <ImageView
                         app:srcCompat="@drawable/house"
-                        android:id="@+id/imageView2"
                         android:layout_gravity="center_horizontal"
                         android:layout_height="40dp"
                         android:layout_width="40dp" />
@@ -72,7 +71,6 @@
                         android:text="Household Size"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView5"
                         android:gravity="center_horizontal"
                         android:textSize="13sp"
                         android:textColor="@color/cardview_light_background"
@@ -102,14 +100,12 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/energy"
-                        android:id="@+id/imageView3"
                         android:layout_gravity="center_horizontal" />
 
                     <TextView
                         android:text="Energy (kWh)"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView6"
                         android:gravity="center_horizontal"
                         android:textSize="13sp"
                         android:textColor="@color/cardview_light_background"
@@ -141,14 +137,12 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/water2"
-                        android:id="@+id/imageView4"
                         android:layout_gravity="center_horizontal" />
 
                     <TextView
                         android:text="Water (gallons)"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView8"
                         android:gravity="center_horizontal"
                         android:textSize="13sp"
                         android:textColor="@color/cardview_light_background"
@@ -183,7 +177,6 @@
 
                     <ImageView
                         app:srcCompat="@drawable/plane"
-                        android:id="@+id/imageView2"
                         android:layout_gravity="center_horizontal"
                         android:layout_height="40dp"
                         android:layout_width="40dp" />
@@ -222,7 +215,6 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/garbage"
-                        android:id="@+id/imageView3"
                         android:layout_gravity="center_horizontal" />
 
                     <TextView
@@ -261,7 +253,6 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/recycle"
-                        android:id="@+id/imageView4"
                         android:layout_gravity="center_horizontal" />
 
                     <TextView
@@ -316,7 +307,6 @@
 
                 <ImageView
                     app:srcCompat="@drawable/nrdc"
-                    android:id="@+id/imageView5"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:layout_width="120dp"
@@ -372,7 +362,6 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     app:srcCompat="@drawable/sierra"
-                    android:id="@+id/imageView7"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical" />
 
@@ -424,7 +413,6 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     app:srcCompat="@drawable/carbofund"
-                    android:id="@+id/imageView6"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical" />
 
@@ -474,7 +462,7 @@
     </ScrollView>
 
     <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar2"
+        android:id="@+id/bottomBar4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:bb_inActiveTabColor="#FFFFFF"
