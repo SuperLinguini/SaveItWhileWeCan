@@ -53,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         }
         overallScore.setText("" + score);
 
+        overallScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, ScoreActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);

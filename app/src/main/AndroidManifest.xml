@@ -54,9 +54,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.briandesouza.saveitwhilewecan.MainActivity" />
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".ScoreActivity"
             android:label="ScoreActivity"
             android:parentActivityName=".MainActivity">
