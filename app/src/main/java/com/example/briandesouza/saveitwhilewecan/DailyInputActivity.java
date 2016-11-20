@@ -281,7 +281,7 @@ public class DailyInputActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_home) {
                     Intent i = new Intent(DailyInputActivity.this, MainActivity.class);
                     startActivity(i);
-                } else if (tabId == R.id.tab_todo) {
+                } else if (tabId == R.id.tab_map) {
                     Intent i = new Intent(DailyInputActivity.this, MapActivity.class);
                     startActivity(i);
                     finish();

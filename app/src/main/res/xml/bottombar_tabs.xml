@@ -6,7 +6,7 @@
         title="Home"
         barColorWhenSelected="#15d0df"/>
     <tab
-        id="@+id/tab_todo"
+        id="@+id/tab_map"
         icon="@mipmap/ic_world"
         title="CO2 Map"
         barColorWhenSelected="#11b8b4"/>

@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(@IdRes int tabId) {
                 if (tabId == R.id.tab_home) {
 
-                } else if (tabId == R.id.tab_todo) {
+                } else if (tabId == R.id.tab_map) {
                     Intent i = new Intent(MainActivity.this, MapActivity.class);
                     startActivity(i);
                     finish();

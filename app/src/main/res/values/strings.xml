@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SaveItWhileWeCan</string>
+    <string name="app_name">Save It While We Can</string>
     <string name="title_activity_daily_input">Daily Quiz</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
