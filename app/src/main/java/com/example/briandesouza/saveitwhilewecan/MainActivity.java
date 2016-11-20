@@ -45,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
     int monthListArray[] = {80, 75, 93};
     int dailyListArray[] = {67, 92, 100, 53, 68, 67, 90, 80, 87, 73, 82, 90, 48, 86, 59, 98,
             65, 100, 70, 59, 83, 76, 95, 100, 84};
+    String[] tips =  {"Household fuel efficiency: If your household has two cars and one is used mostly for commuting, make it a real gas sipper.",
+    "Tires – Keep your tires properly inflated (just this can save 400-700 pounds of CO2 per year).",
+    "Heating and Cooling – Keep your heating and cooling system(s) tuned. When it’s time to replace, do your research.",
+    "Buy locally if possible. Shipping burns fuel. A 5-pound package shipped by air across the country creates 12 pounds of CO2.",
+    "Eat less meat. If you’re already a vegetarian, you save at least 3,000 pounds of CO2 per year compared to meat eaters.",
+    "Reduce. Reuse. Recycle. Manufacturing products produces an average 4-8 pounds of CO2 for every pound of product."};
+
     ArrayList<Integer> monthList = new ArrayList<>(monthListArray.length), dailyList = new ArrayList<>(dailyListArray.length);
 
     @Override
@@ -121,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        int tipStrIndex = (int) (Math.random() * tips.length);
+        TextView tipsBox = (TextView) findViewById(R.id.tipBoxHome);
+        tipsBox.setText(tips[tipStrIndex]);
+
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
