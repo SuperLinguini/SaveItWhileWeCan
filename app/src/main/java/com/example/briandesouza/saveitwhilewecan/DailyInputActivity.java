@@ -5,22 +5,56 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import android.view.View;
+import android.widget.TextView;
+
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import org.w3c.dom.Text;
+
+import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar;
+import static com.example.briandesouza.saveitwhilewecan.R.id.bottomBar2;
+import static com.example.briandesouza.saveitwhilewecan.R.id.noBtnBeefLamb;
+import static com.example.briandesouza.saveitwhilewecan.R.id.yesBtnBeefLamb;
+
 
 public class DailyInputActivity extends AppCompatActivity {
+
+    int beef = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_input);
 
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        final TextView yesBeef = (TextView) findViewById(yesBtnBeefLamb);
+        final TextView noBeef = (TextView) findViewById(noBtnBeefLamb);
+
+        yesBeef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                beef = 1;
+                yesBeef.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary, null));
+                noBeef.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.cardview_dark_background, null));
+            }
+        });
+
+        noBeef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                beef = 0;
+                noBeef.setBackgroundColor(0xFFAA0000);
+                yesBeef.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.cardview_dark_background, null));
+            }
+        });
+
+
+        BottomBar bottomBar = (BottomBar) findViewById(bottomBar2);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {

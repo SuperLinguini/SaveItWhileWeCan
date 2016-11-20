@@ -648,7 +648,7 @@ tools:context="com.example.briandesouza.saveitwhilewecan.DailyInputActivity"
     </LinearLayout>
     </ScrollView>
     <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar"
+        android:id="@+id/bottomBar2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
