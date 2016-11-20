@@ -17,6 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions{
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
 repositories {
@@ -31,6 +37,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
     compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'com.esri.arcgis.android:arcgis-android:10.2.8-1'
     compile 'com.roughike:bottom-bar:2.0.2'
     testCompile 'junit:junit:4.12'
     compile 'com.aurelhubert:ahbottomnavigation:0.1.3'
